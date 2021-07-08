@@ -200,3 +200,4 @@ if g != '':
 		f.write(head[a] + '\n')
 		f.write(''.join(all[a]) + '\n')
 	f.close()
+
