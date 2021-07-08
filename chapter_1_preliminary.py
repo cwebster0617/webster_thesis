@@ -4,10 +4,10 @@ import re,random, argparse
 
 #Arguments that can be altered in the terminal
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--VCF_input_file', type=str)
-parser.add_argument('-o', '--parsed_output_file', type=str)
-parser.add_argument('-a', '--allele_depth', type=int)
-parser.add_argument('-m', '--min_allele_freq', type=float)
+parser.add_argument('-i', '--VCF_input_file', type=str, required=TRUE)
+parser.add_argument('-o', '--parsed_output_file', type=str, required=TRUE)
+parser.add_argument('-a', '--allele_depth', type=int, required=TRUE)
+parser.add_argument('-m', '--min_allele_freq', type=float, required=TRUE)
 
 args = parser.parse_args()
 
