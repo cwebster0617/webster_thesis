@@ -2,11 +2,11 @@ import re,random, os, sys, argparse
 
 #Arguments that can be altered in the terminal
 parser = argparse.ArgumentParser()
-parser.add_argument('-f', '--fasta_file_name', type=str) #look up add.argument = required
-parser.add_argument('-v', '--vcf_file_name', type=str) #look up add.argument = required. Need to have in order to run.
-parser.add_argument('-ad', '--allele_depth', type=int)
-parser.add_argument('-sd', '--sample_depth', type=int)
-parser.add_argument('-o', '--output_directory', type=str) #send files to an optput directory
+parser.add_argument('-f', '--fasta_file_name', type=str, required=True) #input file
+parser.add_argument('-v', '--vcf_file_name', type=str, required=True) #input file
+parser.add_argument('-ad', '--allele_depth', type=int) #parameter: mutation quality
+parser.add_argument('-sd', '--sample_depth', type=int) #parameter: mutation frequency
+parser.add_argument('-o', '--output_directory', type=str, required=True) #send files to an output directory
 
 args = parser.parse_args()
 
